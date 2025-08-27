@@ -1,0 +1,63 @@
+# Employee Management System API
+
+This is a Django REST Framework project for an Employee Management System. It provides a set of APIs for managing employees, departments, attendance, and performance.
+
+## Features
+
+- **Employee Management**: Create, retrieve, update, and delete employee records.
+- **Department Management**: Organize employees into departments.
+- **Attendance Tracking**: Log daily employee attendance.
+- **Performance Evaluation**: Track and manage employee performance.
+- **API Documentation**: Interactive API documentation with Swagger UI.
+- **Data Visualization**: A dashboard with charts to visualize key metrics.
+
+## Getting Started
+
+Follow these instructions to set up and run the project locally.
+
+### Prerequisites
+
+- Python 3.8+
+- pip (Python package installer)
+
+### Installation
+
+1.  Clone the repository:
+    ```bash
+    git clone [https://github.com/your-username/your-repo.git](https://github.com/your-username/your-repo.git)
+    cd your-repo
+    ```
+
+2.  Create a virtual environment (recommended):
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
+
+3.  Install the required packages:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  Run database migrations:
+    ```bash
+    python manage.py makemigrations
+    python manage.py migrate
+    ```
+
+5.  Create a superuser to access the Django admin panel:
+    ```bash
+    python manage.py createsuperuser
+    ```
+
+6.  (Optional) Seed the database with sample data:
+    ```bash
+    python manage.py seed_data
+    ```
+
+### Running the Server
+
+Start the Django development server:
+
+```bash
+python manage.py runserver
