@@ -24,8 +24,9 @@ Follow these instructions to set up and run the project locally.
 
 1.  Clone the repository:
     ```bash
-    git clone [https://github.com/your-username/your-repo.git](https://github.com/your-username/your-repo.git)
-    cd your-repo
+    git clone git@github.com:wouyang2/Intern_Final_Backend_Project.git
+    
+    cd Intern_Final_Backend_Project
     ```
 
 2.  Create a virtual environment (recommended):
