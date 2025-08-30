@@ -32,7 +32,7 @@ Follow these instructions to set up and run the project locally.
 2.  Create a virtual environment (recommended):
     ```bash
     python -m venv venv
-    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    source venv/bin/activate 
     ```
 
 3.  Install the required packages:
