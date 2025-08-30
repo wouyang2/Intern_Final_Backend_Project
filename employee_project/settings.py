@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     'rest_framework',
     'drf_yasg',
-    'employee',
+    'employees',
     'phonenumber_field',
     'django_filters',
     'rest_framework.authtoken',
@@ -155,5 +155,5 @@ SWAGGER_SETTINGS = {
             'description': 'Enter your JWT token in the format: Bearer <token>'
         }
     },
-    'USE_SESSION_AUTH': True, # If you want to use session authentication for Swagger UI
+    'USE_SESSION_AUTH': True, 
 }
