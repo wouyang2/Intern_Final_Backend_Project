@@ -1,11 +1,12 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
+from departments.models import Department
 # Create your models here.
 
-class Department(models.Model):
-    Name = models.CharField(max_length=255)
-    def __str__(self):
-        return self.Name
+# class Department(models.Model):
+#     Name = models.CharField(max_length=255)
+#     def __str__(self):
+#         return self.Name
 
 class Employee (models.Model):
     Name = models.CharField(max_length = 255)
@@ -19,10 +20,10 @@ class Employee (models.Model):
         return self.Name
 
 
-class Attendance(models.Model):
-    Name = models.ForeignKey(Employee, on_delete=models.CASCADE)
-    Date = models.DateField(null=True)
-    Status = models.CharField(max_length = 255)
+# class Attendance(models.Model):
+#     Name = models.ForeignKey(Employee, on_delete=models.CASCADE)
+#     Date = models.DateField(null=True)
+#     Status = models.CharField(max_length = 255)
 
 class Performance(models.Model):
     Name = models.ForeignKey(Employee, on_delete=models.CASCADE)

@@ -1,6 +1,8 @@
 from django.core.management.base import BaseCommand
 from faker import Faker
-from employees.models import Employee, Department, Attendance, Performance
+from employees.models import Employee, Performance
+from attendance.models import Attendance
+from departments.models import Department
 import random
 from datetime import date
 

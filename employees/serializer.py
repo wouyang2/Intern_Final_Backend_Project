@@ -1,11 +1,13 @@
 from rest_framework import serializers
-from .models import Employee, Department, Attendance, Performance
+from .models import Employee, Performance
+from attendance.models import Attendance
+from departments.models import Department
 
 
-class DepartmentSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Department
-        fields = '__all__'
+# class DepartmentSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = Department
+#         fields = '__all__'
 
 class EmployeeSerializer(serializers.ModelSerializer):
 
@@ -15,12 +17,12 @@ class EmployeeSerializer(serializers.ModelSerializer):
         fields = ['id', 'Name', 'Phone_Number', 'Email', 'Address', 'Date_of_join', 'Department']
 
 
-class AttendanceSerializer(serializers.ModelSerializer):
+# class AttendanceSerializer(serializers.ModelSerializer):
 
-    Name = serializers.SlugRelatedField(read_only=True, slug_field = 'Name')
-    class Meta:
-        model = Attendance
-        fields = ['id', 'Name', 'Date', 'Status']
+#     Name = serializers.SlugRelatedField(read_only=True, slug_field = 'Name')
+#     class Meta:
+#         model = Attendance
+#         fields = ['id', 'Name', 'Date', 'Status']
 
 class PerformanceSerializer(serializers.ModelSerializer):
 

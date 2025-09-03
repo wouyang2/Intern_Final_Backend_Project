@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from rest_framework import viewsets, permissions
-from .serializer import DepartmentSerializer, EmployeeSerializer, AttendanceSerializer, PerformanceSerializer
-from .models import Employee, Department, Attendance, Performance
+from .serializer import EmployeeSerializer, PerformanceSerializer
+from .models import Employee, Performance
+from attendance.models import Attendance
+from departments.models import Department
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.authtoken.views import ObtainAuthToken 
 from rest_framework.authtoken.models import Token
@@ -28,10 +30,10 @@ class AuthToken(ObtainAuthToken):
             'email': user.email
         })
 
-class DepartmentViewset(viewsets.ModelViewSet):
-    queryset = Department.objects.all()
-    serializer_class = DepartmentSerializer
-    permission_classes = [permissions.IsAuthenticated]
+# class DepartmentViewset(viewsets.ModelViewSet):
+#     queryset = Department.objects.all()
+#     serializer_class = DepartmentSerializer
+#     permission_classes = [permissions.IsAuthenticated]
 
 class EmployeeViewset(viewsets.ModelViewSet):
     queryset = Employee.objects.all()
@@ -40,10 +42,10 @@ class EmployeeViewset(viewsets.ModelViewSet):
     filterset_fields = ['Dept', 'Date_of_join']
     permission_classes = [permissions.IsAuthenticated]
 
-class AttendanceViewset(viewsets.ModelViewSet):
-    queryset = Attendance.objects.all()
-    serializer_class = AttendanceSerializer
-    permission_classes = [permissions.IsAuthenticated]
+# class AttendanceViewset(viewsets.ModelViewSet):
+#     queryset = Attendance.objects.all()
+#     serializer_class = AttendanceSerializer
+#     permission_classes = [permissions.IsAuthenticated]
 
 class PerformanceViewset(viewsets.ModelViewSet):
     queryset = Performance.objects.all()
