@@ -14,9 +14,9 @@ class Command (BaseCommand):
     def handle(self, *args, **options):
 
         #!!!! DELETE ALL THE EXISTING DATA EACH TIME BEFORE SEEDING THE NEW FAKE DATA
+        Attendance.objects.all().delete()
         Employee.objects.all().delete()
         Department.objects.all().delete()
-        Attendance.objects.all().delete()
         Performance.objects.all().delete()
 
         self.stdout.write("Seeding fake data...")
